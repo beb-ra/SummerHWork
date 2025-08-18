@@ -32,6 +32,10 @@
 *.a
 *.lib
 
+.vs/
+Debug/
+x64/
+
 # Executables
 *.exe
 *.out
