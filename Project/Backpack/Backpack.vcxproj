@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f6f1a114-8c66-4f7b-bd70-07f39a2eca01}</ProjectGuid>
-    <RootNamespace>Object</RootNamespace>
+    <ProjectGuid>{ef9b71c9-510c-475b-a030-2c25087b589b}</ProjectGuid>
+    <RootNamespace>Backpack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,12 +104,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Item;C:\Users\Lelya\cc++\SummerHWork\Project\Object;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Item;C:\Users\Lelya\cc++\SummerHWork\Project\Object;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -128,10 +131,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="object.cpp" />
+    <ClCompile Include="backpack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="object.h" />
+    <ClInclude Include="backpack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Item\Item.vcxproj">
+      <Project>{57bf8d72-ae09-4a4e-b549-647c501a80ad}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Object\Object.vcxproj">
+      <Project>{f6f1a114-8c66-4f7b-bd70-07f39a2eca01}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TVector\TVector.vcxproj">
+      <Project>{c51127a4-b73d-4447-a188-1f828f878768}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
