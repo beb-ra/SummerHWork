@@ -4,11 +4,15 @@
 #include "object.h"
 
 class Backpack {
-    TVector<Item*> things; //вектор указателей
-    Item* hand_object;
-    Item* selected_object; //?
+    TVector<Item*> _things; //вектор указателей
+    Item* _hand_object;
+    Item* _selected_object; //?
 
+public:
     void put_item();
     void throw_away_selected_item();
     void take_selected_item_in_hand();
+
+    Backpack();
+    Backpack(TVector<Item*> things, Item* hand_obj, Item* selected_obj);
 };

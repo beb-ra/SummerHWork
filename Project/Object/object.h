@@ -1,8 +1,11 @@
 #pragma once
 
 class Object {
-    //size_t x_coord;
-    //size_t y_coord;
-    // ??int id
-    int _picture;
+    int x_coord;
+    int y_coord;
+    int _id;
+
+public:
+    Object();
+    Object(int, int, int);
 };
