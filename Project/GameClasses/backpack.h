@@ -4,6 +4,7 @@
 #include "object.h"
 
 class Backpack {
+private:
     TVector<Item*> _things; //вектор указателей
     Item* _hand_object;
     Item* _selected_object; //?

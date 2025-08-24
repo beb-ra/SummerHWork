@@ -5,6 +5,7 @@
 enum TypeCharacter { farmer, fisher, stockbreeder };
 
 class Character : public Object {
+private:
     size_t _energy;
     Backpack _backpack;
     TypeCharacter _type;

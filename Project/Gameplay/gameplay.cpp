@@ -3,6 +3,9 @@
 void Gameplay::create_character(TypeCharacter type) {
 	// создать рюкзак, положить туда необходимые предметы, положить рюкзак в персонажа
     // проверка на тип персонажа
+
+	//Item* item1 = new Item(1);
+
 	/*
 	TVector<Item> objects(5, { Item(1), Item(2), Item(3), Item(4), Item(5) }); //
 

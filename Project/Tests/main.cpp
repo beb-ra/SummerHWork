@@ -1,8 +1,8 @@
 #include <windows.h>
 #include <iostream>
 #include "/Users/Lelya/cc++/SummerHWork/Project/Tvector/tvector.h"
-//#include "/Users/Lelya/cc++/SummerHWork/Project/Gameplay/gameplay.h"
-#include "/Users/Lelya/cc++/SummerHWork/Project/Item/item.h"
+#include "/Users/Lelya/cc++/SummerHWork/Project/Gameplay/gameplay.h"
+#include "/Users/Lelya/cc++/SummerHWork/Project/GameClasses/item.h"
 
 void set_color(int text_color, int bg_color) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -1381,11 +1381,8 @@ bool test_26_3_push_back_after_clear() {
 }
 
 bool test_27_create_Item() {
-    Item item;
-    Item item2(24);
-
-    return TestSystem::check(true, item.get_price() == -1) &&
-        TestSystem::check(true, item2.get_price() == 50);;
+    //наследовать классы от item и object и тестить их
+    return false;
 }
 
 int main() {

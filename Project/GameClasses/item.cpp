@@ -8,7 +8,7 @@ Item::Item() : Object(), _price(-1) {}
 
 Item::Item(int id) : Object(-1, -1, id) {
 	_price = -1;
-	std::ifstream file("C:\\Users\\Lelya\\cc++\\SummerHWork\\Project\\Item\\price_id.txt");
+	std::ifstream file("C:\\Users\\Lelya\\cc++\\SummerHWork\\Project\\GameClasses\\price_id.txt");
 	if (!file.is_open()) {
 		throw std::logic_error("The file is not open");
 	}

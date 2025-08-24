@@ -1,5 +1,7 @@
 #pragma once
 
+class Character;
+
 class Object {
     int x_coord;
     int y_coord;
@@ -8,4 +10,5 @@ class Object {
 public:
     Object();
     Object(int, int, int);
+    virtual void use(class Character* character) = 0;
 };

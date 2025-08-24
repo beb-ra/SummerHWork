@@ -104,14 +104,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\GameClasses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Game;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\GameClasses;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,7 +137,7 @@
     <ClInclude Include="gameplay.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Game\Game.vcxproj">
+    <ProjectReference Include="..\GameClasses\Game.vcxproj">
       <Project>{d563f54f-d18d-4313-866e-e71f927962bd}</Project>
     </ProjectReference>
     <ProjectReference Include="..\TVector\TVector.vcxproj">
