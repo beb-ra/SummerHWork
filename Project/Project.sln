@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gameplay", "Gameplay\Gameplay.vcxproj", "{EC248A83-E03C-4F84-BBD2-472013D67C89}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj", "{D563F54F-D18D-4313-866E-E71F927962BD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameClasses", "GameClasses\Game.vcxproj", "{D563F54F-D18D-4313-866E-E71F927962BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
