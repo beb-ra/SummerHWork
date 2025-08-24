@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{57bf8d72-ae09-4a4e-b549-647c501a80ad}</ProjectGuid>
-    <RootNamespace>Item</RootNamespace>
+    <ProjectGuid>{d563f54f-d18d-4313-866e-e71f927962bd}</ProjectGuid>
+    <RootNamespace>Game</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>GameClasses</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -104,15 +105,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\Object;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\Object;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\Object;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,14 +132,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="backpack.cpp" />
+    <ClCompile Include="character.cpp" />
+    <ClCompile Include="game_map.cpp" />
     <ClCompile Include="item.cpp" />
+    <ClCompile Include="npc.cpp" />
+    <ClCompile Include="object.cpp" />
+    <ClCompile Include="trader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="backpack.h" />
+    <ClInclude Include="character.h" />
+    <ClInclude Include="game_map.h" />
     <ClInclude Include="item.h" />
+    <ClInclude Include="npc.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="trader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Object\Object.vcxproj">
-      <Project>{f6f1a114-8c66-4f7b-bd70-07f39a2eca01}</Project>
+    <ProjectReference Include="..\TVector\TVector.vcxproj">
+      <Project>{c51127a4-b73d-4447-a188-1f828f878768}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

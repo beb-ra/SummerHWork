@@ -104,14 +104,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Object;C:\Users\Lelya\cc++\SummerHWork\Project\NPC;C:\Users\Lelya\cc++\SummerHWork\Project\GameMap;C:\Users\Lelya\cc++\SummerHWork\Project\Character;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Object;C:\Users\Lelya\cc++\SummerHWork\Project\NPC;C:\Users\Lelya\cc++\SummerHWork\Project\GameMap;C:\Users\Lelya\cc++\SummerHWork\Project\Character;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Game;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,14 +137,8 @@
     <ClInclude Include="gameplay.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Character\Character.vcxproj">
-      <Project>{4841815e-2dba-496b-85e8-b108d8ac5a50}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\NPC\NPC.vcxproj">
-      <Project>{933245e1-ce0c-4ff2-aedb-ee4427da1223}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Object\Object.vcxproj">
-      <Project>{f6f1a114-8c66-4f7b-bd70-07f39a2eca01}</Project>
+    <ProjectReference Include="..\Game\Game.vcxproj">
+      <Project>{d563f54f-d18d-4313-866e-e71f927962bd}</Project>
     </ProjectReference>
     <ProjectReference Include="..\TVector\TVector.vcxproj">
       <Project>{c51127a4-b73d-4447-a188-1f828f878768}</Project>

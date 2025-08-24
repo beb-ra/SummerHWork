@@ -20,3 +20,4 @@ public:
     Character(size_t, Backpack, TypeCharacter);
     Character(int x, int y, int id, size_t energy, Backpack backpack, TypeCharacter type);
 };
+

@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Gameplay;C:\Users\Lelya\cc++\SummerHWork\Project\Item;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Gameplay;C:\Users\Lelya\cc++\SummerHWork\Project\Item;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,6 +132,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gameplay\Gameplay.vcxproj">
+      <Project>{ec248a83-e03c-4f84-bbd2-472013d67c89}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\TVector\TVector.vcxproj">
       <Project>{c51127a4-b73d-4447-a188-1f828f878768}</Project>
     </ProjectReference>

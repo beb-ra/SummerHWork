@@ -1,6 +1,8 @@
 #include <windows.h>
 #include <iostream>
 #include "/Users/Lelya/cc++/SummerHWork/Project/Tvector/tvector.h"
+//#include "/Users/Lelya/cc++/SummerHWork/Project/Gameplay/gameplay.h"
+#include "/Users/Lelya/cc++/SummerHWork/Project/Item/item.h"
 
 void set_color(int text_color, int bg_color) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -1378,7 +1380,16 @@ bool test_26_3_push_back_after_clear() {
     return TestSystem::check(true, object == object2);
 }
 
+bool test_27_create_Item() {
+    Item item;
+    Item item2(24);
+
+    return TestSystem::check(true, item.get_price() == -1) &&
+        TestSystem::check(true, item2.get_price() == 50);;
+}
+
 int main() {
+    /*
     TestSystem::start_test(test1_try_create_default_object,
         "TVector.test1_try_create_default_object");
     TestSystem::start_test(test2_try_create_with_default_object,
@@ -1555,7 +1566,10 @@ int main() {
         "TVector.test_26_2_push_front_after_clear");
     TestSystem::start_test(test_26_3_push_back_after_clear,
         "TVector.test_26_3_push_back_after_clear");
+    */
 
+    TestSystem::start_test(test_27_create_Item,
+    "Item.test_27_create_Item");
     TestSystem::print_final_info();
     system("pause");
     return 0;
