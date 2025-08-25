@@ -1,6 +1,7 @@
 #pragma once
 
 class Character;
+class Gameplay;
 
 class Object {
     int x_coord;
@@ -10,5 +11,39 @@ class Object {
 public:
     Object();
     Object(int, int, int);
-    virtual void use(class Character* character) = 0;
+
+protected:
+    //virtual void use(class Character* character) {}
+};
+
+class Door : public Object {
+    void use(class Gameplay* gameplay) {
+        // при нажатии плашка "хотите уйти домой спать? если выбирается да, вызывается эта функция"
+        gameplay->change_times_of_day(true);
+    }
+};
+
+class LocationTransitions : public Object {
+    int _location_id; // в которую ведет переход
+
+    void use(class Character* character) {
+        // перейти в другую локацию
+    }
+};
+
+class Chest : public Object {
+    TVector<Item*> _things;
+
+    void use(class Character* character) {
+        // че тут должно быть хз
+    }
+
+    void add_item(Item* item) {
+        _things.push_back(item);
+    }
+
+    TVector<Item*> get_items() { //
+        TVector<Item*> result(_things);
+        return result;
+    }
 };

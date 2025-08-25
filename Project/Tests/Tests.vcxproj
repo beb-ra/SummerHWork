@@ -135,9 +135,6 @@
     <ProjectReference Include="..\GameClasses\Game.vcxproj">
       <Project>{d563f54f-d18d-4313-866e-e71f927962bd}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Gameplay\Gameplay.vcxproj">
-      <Project>{ec248a83-e03c-4f84-bbd2-472013d67c89}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\TVector\TVector.vcxproj">
       <Project>{c51127a4-b73d-4447-a188-1f828f878768}</Project>
     </ProjectReference>

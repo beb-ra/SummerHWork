@@ -10,5 +10,28 @@ public:
     Item(int x, int y, int id);
 
     int get_price();
-    void use(Character* character) override = 0;
+
+protected:
+    virtual void use(Character* character) {} // мб виртуальный сделать, хз
 };
+
+class Products : public Item {
+    int _adding_energy;
+
+protected:
+    void use(Character* character) override {
+        character->eat(_adding_energy);
+        delete this;
+    }
+};
+
+class Fish : public Products {
+    int fishing_difficulty;  // тоже по id подт€гивать
+};
+
+class Seeds : public Item {
+    void use(Character* character) override {
+        character->plant(this);
+    }
+};
+

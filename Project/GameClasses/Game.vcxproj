@@ -105,14 +105,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Gameplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Gameplay;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClCompile Include="backpack.cpp" />
     <ClCompile Include="character.cpp" />
+    <ClCompile Include="gameplay.cpp" />
     <ClCompile Include="game_map.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="npc.cpp" />
@@ -143,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="backpack.h" />
     <ClInclude Include="character.h" />
+    <ClInclude Include="gameplay.h" />
     <ClInclude Include="game_map.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="npc.h" />

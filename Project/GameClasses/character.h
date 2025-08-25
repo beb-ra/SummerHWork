@@ -11,11 +11,12 @@ private:
     TypeCharacter _type;
 
 public:
-    void plant();
+    void plant(Seeds*);
     void uproot();
     void water();
     void fish();
     void feed();
+    void eat(int energy);
 
     Character();
     Character(size_t, Backpack, TypeCharacter);
