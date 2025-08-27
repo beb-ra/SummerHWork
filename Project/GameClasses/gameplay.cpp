@@ -1,7 +1,6 @@
 #include "gameplay.h"
 #include "object.h"
 #include "item.h"
-#include "character.h"
 #include "npc.h"
 
 int Gameplay::rand_generation(int min, int max) const noexcept {
@@ -43,5 +42,24 @@ void Gameplay::create_character(TypeCharacter type) {
 
     Character main_charracter(static_cast < size_t>(100), backpack, type);
     */
+}
 
+void Gameplay::plant(Seeds* seed) {
+    // тайл из soil в unwatering_plant
+    _map.highlight_cells(Tile::soil);
+    // какой-то обработчик нажатия, получаем координаты из какой-то функции
+    // while (пока не закончатся семена)
+    int x = 5, y = 5;
+    _map._highlights[x][y] = false;
+    _map._tiles[x][y] = Tile::unwatered_plant;
+    _map._map_objects[x][y] = seed;
+    // break если переключились на другой слот в инвентаре или нажали закончить хз или если грядки закончились
+}
+
+void Gameplay::dig(Hoe*) {
+    // тайл из grass в soil
+}
+
+void Gameplay::eat(int energy) {
+    _character._energy += energy;
 }

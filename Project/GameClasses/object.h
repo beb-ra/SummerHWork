@@ -1,5 +1,6 @@
 #pragma once
-#include "gameplay.h"
+#include "igameplay_actions.h"
+#include "tvector.h"
 
 #ifndef OBJECT_H
 #define OBJECT_H
@@ -20,8 +21,9 @@ protected:
     //virtual void use(class Character* character) {}
 };
 
+
 class Door : public Object {
-    void use(class Gameplay* gameplay) {
+    void use(IGameplayActions* gameplay) {
         // при нажатии плашка "хотите уйти домой спать? если выбирается да, вызывается эта функция"
         gameplay->change_times_of_day(true);
     }
@@ -30,7 +32,7 @@ class Door : public Object {
 class LocationTransitions : public Object {
     int _location_id; // в которую ведет переход
 
-    void use(class Character* character) {
+    void use(IGameplayActions* gameplay) {
         // перейти в другую локацию
     }
 };
@@ -38,7 +40,7 @@ class LocationTransitions : public Object {
 class Chest : public Object {
     TVector<Item*> _things;
 
-    void use(class Character* character) {
+    void use(IGameplayActions* gameplay) {
         // че тут должно быть хз
     }
 

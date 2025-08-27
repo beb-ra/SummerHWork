@@ -1,13 +1,4 @@
 #include "character.h"
-#include "item.h"
-
-void Character::plant(Seeds*) {
-    // сажаем типа
-}
-
-void Character::eat(int energy) {
-    _energy += energy;
-}
 
 Character::Character() : Object(), _energy(100), _backpack(), _type(TypeCharacter::farmer) {}
 

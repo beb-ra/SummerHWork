@@ -2,7 +2,8 @@
 #include <string>
 #include <iostream>
 #include "item.h"
-
+#include "gameplay.h"
+#include "object.h"
 
 Item::Item() : Object(), _price(-1) {}
 

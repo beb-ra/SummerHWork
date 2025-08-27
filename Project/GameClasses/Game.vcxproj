@@ -146,6 +146,7 @@
     <ClInclude Include="character.h" />
     <ClInclude Include="gameplay.h" />
     <ClInclude Include="game_map.h" />
+    <ClInclude Include="igameplay_actions.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="npc.h" />
     <ClInclude Include="object.h" />

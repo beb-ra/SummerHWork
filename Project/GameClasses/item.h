@@ -1,6 +1,8 @@
 #pragma once
 #include "object.h"
-#include "character.h"
+#include "igameplay_actions.h"
+
+class Character;
 
 #ifndef ITEM_H
 #define ITEM_H
@@ -15,16 +17,15 @@ public:
 
     int get_price();
 
-protected:
-    virtual void use(Character* character) {} // мб виртуальный сделать, хз
+    virtual void use(IGameplayActions* gameplay) {} // мб виртуальным сделать, хз
 };
 
 class Products : public Item {
     int _adding_energy;
 
-protected:
-    void use(Character* character) override {
-        character->eat(_adding_energy);
+public:
+    void use(IGameplayActions* gameplay) override {
+        gameplay->eat(_adding_energy);
         delete this;
     }
 };
@@ -34,8 +35,30 @@ class Fish : public Products {
 };
 
 class Seeds : public Item {
-    void use(Character* character) override {
-        character->plant(this);
+public:
+    void use(IGameplayActions* gameplay) override {
+        gameplay->plant(this);
+    }
+};
+
+class FishingRod : public Item {
+public:
+    void use(IGameplayActions* gameplay) override {
+        gameplay->fish(this);
+    }
+};
+
+class Hoe : public Item {
+public:
+    void use(IGameplayActions* gameplay) override {
+        gameplay->dig(this);
+    }
+};
+
+class Bailer : public Item {
+public:
+    void use(IGameplayActions* gameplay) override {
+        gameplay->water(this);
     }
 };
 
