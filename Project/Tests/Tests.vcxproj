@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Gameplay;C:\Users\Lelya\cc++\SummerHWork\Project\GameClasses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\GameClasses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\Gameplay;C:\Users\Lelya\cc++\SummerHWork\Project\GameClasses;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Lelya\cc++\SummerHWork\Project\TVector;C:\Users\Lelya\cc++\SummerHWork\Project\GameClasses;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

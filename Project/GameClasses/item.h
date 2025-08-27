@@ -1,5 +1,9 @@
 #pragma once
 #include "object.h"
+#include "character.h"
+
+#ifndef ITEM_H
+#define ITEM_H
 
 class Item : public Object {
     int _price;
@@ -35,3 +39,4 @@ class Seeds : public Item {
     }
 };
 
+#endif ITEM_H

@@ -1,6 +1,10 @@
 #pragma once
 #include "tvector.h"
-#include "object.h"
+
+#ifndef GAME_MAP_H
+#define GAME_MAP_H
+
+class Object;
 
 enum Tile { river, grass, soil };
 
@@ -12,3 +16,5 @@ class GameMap {
     void place_object_by_its_coords(); //?
     void get_object_by_coords();
 };
+
+#endif GAME_MAP_H

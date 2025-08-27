@@ -1,7 +1,11 @@
 #pragma once
+#include "gameplay.h"
+
+#ifndef OBJECT_H
+#define OBJECT_H
 
 class Character;
-class Gameplay;
+class Item;
 
 class Object {
     int x_coord;
@@ -47,3 +51,5 @@ class Chest : public Object {
         return result;
     }
 };
+
+#endif OBJECT_H

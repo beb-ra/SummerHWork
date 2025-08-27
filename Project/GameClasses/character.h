@@ -1,8 +1,12 @@
 #pragma once
-#include "object.h"
 #include "backpack.h"
 
-enum TypeCharacter { farmer, fisher, stockbreeder };
+#ifndef CHARACTER_H
+#define CHARACTER_H
+
+class Seeds;
+
+//enum TypeCharacter { farmer, fisher, stockbreeder };
 
 class Character : public Object {
 private:
@@ -22,4 +26,6 @@ public:
     Character(size_t, Backpack, TypeCharacter);
     Character(int x, int y, int id, size_t energy, Backpack backpack, TypeCharacter type);
 };
+
+#endif // CHARACTER_H
 

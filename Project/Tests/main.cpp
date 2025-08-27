@@ -1,8 +1,7 @@
 #include <windows.h>
 #include <iostream>
 #include "/Users/Lelya/cc++/SummerHWork/Project/Tvector/tvector.h"
-#include "/Users/Lelya/cc++/SummerHWork/Project/Gameplay/gameplay.h"
-#include "/Users/Lelya/cc++/SummerHWork/Project/GameClasses/item.h"
+#include "gameplay.h"
 
 void set_color(int text_color, int bg_color) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);

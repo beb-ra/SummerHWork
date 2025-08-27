@@ -1,4 +1,5 @@
 #include "character.h"
+#include "item.h"
 
 void Character::plant(Seeds*) {
     // сажаем типа

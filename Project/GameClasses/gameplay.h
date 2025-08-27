@@ -1,12 +1,14 @@
 #pragma once
 #include <random>
-#include "tvector.h"
-#include "object.h"
-#include "item.h"
-#include "npc.h"
 #include "game_map.h"
-#include "character.h"
-#include "backpack.h"
+
+#ifndef GAMEPLAY_H
+#define GAMEPLAY_H
+
+class Object;
+class Item;
+class NPC;
+enum TypeCharacter { farmer, fisher, stockbreeder };
 
 class Gameplay {
     TVector<NPC*> _npc_list;
@@ -23,3 +25,5 @@ public:
     void start_random_event();
     void change_times_of_day(float);
 };
+
+#endif GAMEPLAY_H

@@ -1,4 +1,8 @@
 #include "gameplay.h"
+#include "object.h"
+#include "item.h"
+#include "character.h"
+#include "npc.h"
 
 int Gameplay::rand_generation(int min, int max) const noexcept {
     std::random_device rd;
