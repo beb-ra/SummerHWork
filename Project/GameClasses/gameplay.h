@@ -25,13 +25,14 @@ public:
     void game_initialization();
     void start_random_event();
     void change_times_of_day(float);
+    void move_npc();
 
+    void go_to_another_location(int) override;
     void plant(Seeds* seed) override;
     void dig(Hoe* hoe) override;
     void water(Bailer* bailer) override;
     void fish(FishingRod* rod) override;
     void eat(int energy) override;
-    
     void feed();
 };
 

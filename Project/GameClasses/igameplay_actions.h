@@ -9,8 +9,10 @@ class FishingRod;
 
 class IGameplayActions {
 public:
-    virtual ~IGameplayActions() = default;
+    virtual ~IGameplayActions() = default;  // при удалении объекта, созданного через указатель на базовый класс 
+                                            // будет вызван деструктор производного класса
 
+    virtual void go_to_another_location(int) = 0;
     virtual void plant(Seeds* seed) = 0;
     virtual void dig(Hoe* hoe) = 0;
     virtual void water(Bailer* bailer) = 0;

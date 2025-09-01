@@ -13,12 +13,12 @@ private:
     //Item* _selected_object; //?
 
 public:
-    //void put_item();
-    void throw_away_item();
-    void select_item(Character*, Item*);
-
+    ~Backpack();
     Backpack();
     Backpack(TVector<Item*> things);
+
+    void throw_away_item(Item*);
+    void select_item(Character*, Item*);
 };
 
 #endif BACKPACK_H

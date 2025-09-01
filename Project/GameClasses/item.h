@@ -11,6 +11,7 @@ class Item : public Object {
     int _price;
 
 public:
+    virtual ~Item() = default;
     Item();
     Item(int id);
     Item(int x, int y, int id);
@@ -24,9 +25,10 @@ class Products : public Item {
     int _adding_energy;
 
 public:
+    virtual ~Products() = default;
     void use(IGameplayActions* gameplay) override {
         gameplay->eat(_adding_energy);
-        delete this;
+        delete this; // мб лучше в gameplay удалять
     }
 };
 

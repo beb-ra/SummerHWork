@@ -44,6 +44,11 @@ void Gameplay::create_character(TypeCharacter type) {
     */
 }
 
+
+void Gameplay::go_to_another_location(int id_location) {
+    // хз че, переход в другую локацию
+}
+
 void Gameplay::plant(Seeds* seed) {
     // тайл из soil в unwatering_plant
     _map.highlight_cells(Tile::soil);
@@ -62,4 +67,12 @@ void Gameplay::dig(Hoe*) {
 
 void Gameplay::eat(int energy) {
     _character._energy += energy;
+}
+
+void Gameplay::water(Bailer* bailer) {
+
+}
+
+void Gameplay::fish(FishingRod* rod) {
+
 }

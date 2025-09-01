@@ -14,11 +14,12 @@ class Object {
     int _id;
 
 public:
+    virtual ~Object() = default;
     Object();
-    Object(int, int, int);
+    Object(int id);
+    Object(int x, int y, int id);
 
-protected:
-    //virtual void use(class Character* character) {}
+    //virtual void use(IGameplayActions* gameplay) {}
 };
 
 
@@ -34,6 +35,7 @@ class LocationTransitions : public Object {
 
     void use(IGameplayActions* gameplay) {
         // перейти в другую локацию
+        gameplay->go_to_another_location(_location_id);
     }
 };
 

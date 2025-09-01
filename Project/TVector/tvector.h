@@ -36,6 +36,7 @@ class TVector {
 public:
     explicit TVector(size_t size = 0);
     TVector(size_t size, const T* data);
+    TVector(size_t size, const T& value);
     TVector(const TVector<T>& other);
     TVector(size_t size, std::initializer_list<T> data);
     ~TVector();
@@ -135,6 +136,24 @@ TVector<T>::TVector(size_t size, const T* data) {
 
     for (size_t i = 0; i < size; i++) {
         _data[i] = data[i];
+        _states[i] = State::busy;
+    }
+    for (size_t i = size; i < _capacity; i++) {
+        _states[i] = State::empty;
+    }
+}
+
+template <class T>
+TVector<T>::TVector(size_t size, const T& value) {
+    _size = size;
+    _capacity = (size / STEP_OF_CAPACITY + 1) * STEP_OF_CAPACITY;
+    _deleted = 0;
+
+    _data = new T[_capacity];
+    _states = new State[_capacity];
+
+    for (size_t i = 0; i < size; i++) {
+        _data[i] = value;
         _states[i] = State::busy;
     }
     for (size_t i = size; i < _capacity; i++) {
